@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -15,7 +17,7 @@ const app = express();
 //   }
 
 var corsOptions = {
-    origin: 'http://localhost:3000'
+    origin: process.env.CORS_URL
   };
 
 app.use(cors(corsOptions));
